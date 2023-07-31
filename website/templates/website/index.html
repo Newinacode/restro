@@ -16,6 +16,9 @@
 .splide__slide {
   width: 100%;
   height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 #image1{
@@ -31,6 +34,8 @@
 #image4{
     background-image: url("{% static 'images/wine-3.jpg' %}");
 }
+
+
 
 
 </style>
@@ -75,7 +80,7 @@
 
 
 
-<section class="ftco-section ftco-wrap-about ftco-no-pb ftco-no-pt" style="display: flex; flex-direction: row; justify-content: center;">
+<section class="ftco-section ftco-wrap-about ftco-no-pb ftco-no-pt">
     <div class="container">
         <div class="row no-gutters">
             <!-- <div class="col-sm-4 p-4 p-md-5 d-flex align-items-center justify-content-center bg-primary">
@@ -138,8 +143,8 @@
                     </div>
                 </form>
             </div> -->
-            <div class="col-sm-8 wrap-about py-5 ftco-animate img" id="image3"  >
-                <div class="row pb-5 pb-md-0 " style="justify-content: center;">
+            <div class="col-sm-8 wrap-about py-5 ftco-animate img" id="image3" >
+                <div class="row pb-5 pb-md-0 ">
                     <div class="col-md-12 col-lg-7" >
                         <div class="heading-section mt-5 mb-4">
                             <div class="pl-lg-3 ml-md-5">
@@ -180,11 +185,11 @@
         </div>
 
         <!-- splide start -->
-        <section id="image-carousel" class="splide" aria-label="Beautiful Images">
-            <div class="splide__track">
+        <section id="image-carousel" class="splide"  aria-label="Beautiful Images">
+            <div class="splide__track" >
                   <ul class="splide__list">
-                      <li class="splide__slide">
-                        <div class="col-md-6 col-lg-4">
+                      <li class="splide__slide" style=" display: flex; justify-content: center; align-items: center;">
+                        <div class="col-md-8 col-lg-8">
                             <div class="menu-wrap">
                                 <div class="heading-menu text-center ftco-animate">
                                     <h3>Breakfast</h3>
@@ -236,8 +241,8 @@
                             </div>
                         </div>
                       </li>
-                      <li class="splide__slide">
-                        <div class="col-md-6 col-lg-4">
+                      <li class="splide__slide" display: flex; justify-content: center; align-items: center;">
+                        <div class="col-md-8 col-lg-8">
                             <div class="menu-wrap">
                                 <div class="heading-menu text-center ftco-animate">
                                     <h3>Lunch</h3>
@@ -289,8 +294,8 @@
                             </div>
                         </div>
                       </li>
-                      <li class="splide__slide">
-                        <div class="col-md-6 col-lg-4">
+                      <li class="splide__slide" display: flex; justify-content: center; align-items: center;">
+                        <div class="col-md-8 col-lg-8">
                             <div class="menu-wrap">
                                 <div class="heading-menu text-center ftco-animate">
                                     <h3>Dinner</h3>
@@ -342,8 +347,8 @@
                             </div>
                         </div>
                       </li>
-                      <li class="splide__slide">
-                        <div class="col-md-6 col-lg-4">
+                      <li class="splide__slide" display: flex; justify-content: center; align-items: center;">
+                        <div class="col-md-8 col-lg-8">
                             <div class="menu-wrap">
                                 <div class="heading-menu text-center ftco-animate">
                                     <h3>Desserts</h3>
@@ -395,8 +400,8 @@
                             </div>
                         </div>
                       </li>
-                      <li class="splide__slide">
-                        <div class="col-md-6 col-lg-4">
+                      <li class="splide__slide" display: flex; justify-content: center; align-items: center;">
+                        <div class="col-md-8 col-lg-8">
                             <div class="menu-wrap">
                                 <div class="heading-menu text-center ftco-animate">
                                     <h3>Wine Card</h3>
@@ -448,8 +453,8 @@
                             </div>
                         </div>
                       </li>
-                      <li class="splide__slide">
-                        <div class="col-md-6 col-lg-4">
+                      <li class="splide__slide" display: flex; justify-content: center; align-items: center;">
+                        <div class="col-md-8 col-lg-8">
                             <div class="menu-wrap">
                                 <div class="heading-menu text-center ftco-animate">
                                     <h3>Drinks &amp; Tea</h3>

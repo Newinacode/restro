@@ -17,7 +17,6 @@ class Reservation(models.Model):
     url = models.URLField(max_length = 200)
 
 
-
 class Day(models.TextChoices):
     SUNDAY = "SUN",_("Sunday")
     MONDAY = "MON",_("Monday")

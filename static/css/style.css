@@ -9060,7 +9060,7 @@ h1, h2, h3, h4, h5,
     width: calc(100% - 80px);
     padding-left: 20px; }
     .menus .text .one-half {
-      width: calc(100% - 70px); }
+      width: calc(100% ); }
       .menus .text .one-half h3 {
         font-size: 17px;
         font-weight: 500;

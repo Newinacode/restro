@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from .models import Item,Tag
+from .models import Item,Tag,OpeningHours
 # Create your views here.
 
 
@@ -17,10 +17,14 @@ def index(request):
         tag["items"] = item
         result.append(tag)
 
-    print(result)
+
+
+    opening_hour  = OpeningHours.objects.all()
+   
     
     context = {
-        "result":result
+        "result":result,
+        "opening_hour":opening_hour
     }
     print(tags)
     return render(request,'website/index.html',context)

@@ -38,3 +38,22 @@ def about(request):
 
 def contact(request):
     return render(request,'website/contact.html')
+
+
+
+def menu(request):
+    result = []
+    tags = Tag.objects.all()
+
+    for i in tags:
+        tag = {
+            "tag":i
+        }
+        item = i.items.all()
+        tag["items"] = item
+        result.append(tag)
+
+    context = {
+        "result":result,
+    }
+    return render(request,'website/menu.html',context)

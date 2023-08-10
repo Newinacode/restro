@@ -5,8 +5,8 @@
     document.addEventListener( 'DOMContentLoaded', function () {
         var main = new Splide( '#thumbnail-carousel',{
             type:'loop',
-            fixedWidth: 100,
-		    gap       : 10,
+            fixedWidth: 110,
+		    gap       : 20,
 		    rewind    : true,
 		    pagination: false,
             
@@ -22,6 +22,7 @@
         height: auto;
         
 }
+
 </style>
 {% endblock style %}
 
@@ -33,7 +34,7 @@
     <div class="container" style="display:flex;flex-direction: column;">
 
         
-        <div class="row justify-content-center mb-5 pb-2" style="margin: 100px;">
+        <div class="row justify-content-center mb-5 pb-2" style="margin-top: 150px;">
             <div class="col-md-7 text-center heading-section ftco-animate">
                 <span class="subheading">Specialties</span>
                 <br>
@@ -46,14 +47,14 @@
         <section
         id="thumbnail-carousel"
         class="splide"
-         aria-label="The carousel with thumbnails. Selecting a thumbnail will change the Beautiful Gallery carousel." style="margin: 150px;">
+        aria-label="The carousel with thumbnails. Selecting a thumbnail will change the Beautiful Gallery carousel." style="margin: 50px; ">
             <div class="splide__track">
                 <ul class="splide__list">
                     {% for tag in result %} 
                       <li class="splide__slide">
-                        <div class="btn-container" style=" margin: 50px; ">
+                        <div class="btn-container" style="z-index: 20;">
                             <a href="#{{tag.tag.name}}" style="color: white;">
-                                <button type="button" class="btn btn-primary" style="height: 60px; width: 100px; ">
+                                <button type="button" class="btn btn-primary" style="height: 60px; width: 110px; ">
                                 {{tag.tag.name}}
                                 </button>
                             </a>

@@ -30,10 +30,23 @@
 <link rel="stylesheet" href="{% static 'css/splide.min.css' %}">
 
 
+<style>
+	#logo-image{
+		
+			background-image: url("{% static 'images/Main-images/JB-logo-1.png' %}");
+			
+	}
+	/* .ftco-navbar-light.scrolled .navbar-brand {
+      color: #000000;
+      background-image: url("{% static 'images/Main-images/JB-logo.png' %}");
+	  width: 100vw;
+	  height: 100vh;
+      padding-left: 0; } */
 
+</style>
 
 	{% block style %}
-
+		
 	{% endblock style %}
 </head>
 <body>
@@ -61,7 +74,10 @@
 	
 	<nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
 		<div class="container">
-			<a class="navbar-brand" href="{% url 'index' %}">JB<span> Sushi.Bar</span></a>
+			<!-- <a class="navbar-brand" >JB<span> Sushi.Bar</span></a> -->
+			<div   >
+				<img src="../../static/images/Main-images/JB-logo-1.png" style="height: 70px; width: auto; object-fit: contain; padding-left:15px;" alt="">
+			</div>
 			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
 				<span class="oi oi-menu"></span> Menu
 			</button>
@@ -90,7 +106,10 @@
 			<div class="row mb-5">
 				<div class="col-md-6 col-lg-3">
 					<div class="ftco-footer-widget mb-4">
-						<h2 class="ftco-heading-2">JB Sushi Bar</h2>
+						<div   >
+							<img src="../../static/images/Main-images/JB-logo-1.png" style="height: 70px; width: auto; object-fit: contain; margin:15px;" alt="">
+						</div>
+						<!-- <h2 class="ftco-heading-2">JB Sushi Bar</h2> -->
 						<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove</p>
 						<ul class="ftco-footer-social list-unstyled float-md-left float-lft mt-3">
 							<li class="ftco-animate"><a href="#"><span class="fa fa-twitter"></span></a></li>

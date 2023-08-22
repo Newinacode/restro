@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from .models import Item,Tag,OpeningHours
+from .models import Item,Tag,OpeningHours,Reservation
 # Create your views here.
 
 
@@ -20,11 +20,13 @@ def index(request):
 
 
     opening_hour  = OpeningHours.objects.all()
+    reservation = Reservation.objects.first()
    
     
     context = {
         "result":result,
-        "opening_hour":opening_hour
+        "opening_hour":opening_hour,
+        "reseration":reservation
     }
     print(tags)
     return render(request,'website/index.html',context)

@@ -43,3 +43,9 @@ class Info(models.Model):
     email = models.EmailField(blank=True,null=True)
     instagram = models.URLField(blank=True,null=True)
     facebook= models.URLField(blank=True,null=True)
+
+
+    def save(self, *args, **kwargs):
+        if not self.pk:
+            Info.objects.all().delete()
+        super(Info, self).save(*args, **kwargs)

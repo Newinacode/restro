@@ -1,5 +1,5 @@
 {% extends 'base.html' %}
-
+{%load static%}
 {% block style %}
 <script>
     document.addEventListener( 'DOMContentLoaded', function () {
@@ -48,10 +48,10 @@
         id="thumbnail-carousel"
         class="splide"
         aria-label="The carousel with thumbnails. Selecting a thumbnail will change the Beautiful Gallery carousel." style="margin: 50px; ">
-            <div class="splide__track">
+            <div class="splide__track" >
                 <ul class="splide__list">
                     {% for tag in result %} 
-                      <li class="splide__slide">
+                      <li class="splide__slide" class="nav-item {% block nav-about %}{% endblock nav-about %}">
                         <div class="btn-container" style="z-index: 20;">
                             <a href="#{{tag.tag.name}}" style="color: white;">
                                 <button type="button" class="btn btn-primary" style="height: 60px; width: 110px; ">

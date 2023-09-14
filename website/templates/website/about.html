@@ -9,6 +9,9 @@
   #ingredient-image{
     background-image: url("{% static 'images/Main-images/sushi-10.jpeg' %}");
 }
+#about-image{
+  background-image: url("{% static 'images/Main-images/sushi-10.jpeg' %}");
+}
 </style>
 {% endblock style %}
 {% block content %}
@@ -21,12 +24,31 @@
     <div class="row no-gutters slider-text align-items-end justify-content-center">
       <div class="col-md-9 ftco-animate text-center mb-5">
         <h1 class="mb-2 bread">About</h1>
-        <p class="breadcrumbs"><span class="mr-2"><a href="{% url 'index' %}">Home <i class="fa fa-chevron-right"></i></a></span> <span>About <i class="fa fa-chevron-right"></i></span></p>
+        <!-- <p class="breadcrumbs"><span class="mr-2"><a href="{% url 'index' %}">Home <i class="fa fa-chevron-right"></i></a></span> <span>About <i class="fa fa-chevron-right"></i></span></p> -->
       </div>
     </div>
   </div>
 </section>
 
+<section class="ftco-section ftco-no-pt ftco-no-pb">
+  <div class="container">
+      <div class="row d-flex">
+          
+          <div class="col-md-6 ftco-animate makereservation p-4 p-md-5">
+              <div class="heading-section ftco-animate mb-5">
+                  <span class="subheading">About Us</span>
+                  <br>
+                  <h2 class="mb-4">JB Sushi Bar</h2>
+                  <p>JB Sushi Bar, nestled in the heart of London, is a culinary gem that combines the artistry of Japanese cuisine with a contemporary flair. With a menu brimming with a delectable array of sushi, sashimi, and other Japanese delights, it's a haven for both sushi enthusiasts and newcomers to this gastronomic world. Their sushi chefs craft each roll with precision and creativity, using the freshest ingredients available. The restaurant's serene ambiance provides the perfect backdrop for a memorable dining experience, whether you're enjoying a romantic evening out or gathering with friends. JB Sushi Bar offers a taste of Japan in the vibrant setting of London, making it a must-visit destination for anyone seeking an authentic and delightful sushi experience.</p>
+                  
+              </div>
+          </div>
+          <div class="col-md-6 d-flex">
+              <div class="img img-2 w-100 mr-md-2 m-4 d-sm-none d-md-block" id="about-image"></div>
+          </div>
+      </div>
+  </div>
+</section>
 
 <section class="ftco-section ftco-no-pt ftco-no-pb">
  <div class="container">
@@ -36,16 +58,52 @@
    </div>
    <div class="col-md-6 ftco-animate makereservation p-4 p-md-5">
      <div class="heading-section ftco-animate mb-5">
-      <span class="subheading">This is our secrets</span>
+      <span class="subheading">This is our secret</span>
       <br>
       <h2 class="mb-4">Perfect Ingredients</h2>
-      <p>Far beyond the ordinary, hidden within our culinary realm, beyond the borders of conventional taste lies our closely guarded secret: the perfect ingredients for JB Sushi Bar. Deep within our kitchen, far from compromise, we handpick the freshest seafood, the finest rice, and the most delicate seasonings. Like the blind texts living in Bookmarksgrove, our ingredients come together in harmony, creating sushi that rests majestically on the coast of perfection, floating atop the ocean of flavor in the world of Semantics. 
+      <p>
+        Our commitment to excellence is most evident in the delicacies we present on your plate.
+        Every ingredient, meticulously sourced from trusted suppliers, is a testament to our dedication 
+        to freshness and quality. We believe that exceptional sushi starts with the finest components, 
+        and we spare no effort in ensuring that the flavors we serve are unparalleled. From hand-selected, 
+        high-quality fish to thoughtfully chosen accompaniments, each roll and piece of nigiri embodies our 
+        devotion to the art of sushi-making. In addition to our culinary offerings, we've curated a selection of 
+        beverages that complement our dishes flawlessly. With a range of choices that includes a variety of sake, 
+        as well as an assortment of wines, gins, and other spirits with a Japanese connection, your dining experience 
+        is elevated to a symphony of flavors.
       </p>
       <!-- <p><a href="#" class="btn btn-primary">Registration</a></p> -->
     </div>
   </div>
 </div>
 </div>
+</section>
+
+<section class="ftco-section ftco-no-pt ftco-no-pb">
+  <div class="container">
+      <div class="row d-flex">
+          
+          <div class="col-md-6 ftco-animate makereservation p-4 p-md-5">
+              <div class="heading-section ftco-animate mb-5">
+                  <span class="subheading">Our Experts</span>
+                  <br>
+                  <h2 class="mb-4">Meet the Master Chef</h2>
+                  <p>Behind every exceptional meal is an extraordinary chef, and ours brings over two decades of sushi expertise to your table. 
+                    Having honed his craft across Europe, our master chef infuses his creations with a touch of traditional Japanese techniques 
+                    along with innovative twists that appeal to the modern palate. With a wealth of experience and an innate understanding of 
+                    flavor combinations, our chef curates a menu that reflects his culinary journey. His most recent stop was in the bustling 
+                    culinary scene of London, where he perfected his skills and refined his art. At our sushi shop, his expertise takes center 
+                    stage, offering you an unforgettable culinary experience that's steeped in tradition yet guided by a vision for the future.
+
+                    Visit us to embark on a sushi adventure that transcends the ordinary, where each moment is a harmonious blend of taste, ambiance, and mastery.</p>
+                  
+              </div>
+          </div>
+          <div class="col-md-6 d-flex">
+              <div class="img img-2 w-100 mr-md-2 m-4 d-sm-none d-md-block" id="about-image"></div>
+          </div>
+      </div>
+  </div>
 </section>
 
 <!-- <section class="ftco-section ftco-counter img" id="section-counter" style="background-image: url(images/bg_4.jpg);" data-stellar-background-ratio="0.5">

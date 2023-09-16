@@ -26,6 +26,10 @@
     .menu-Image{
         background-image: url("{% static 'images/sushi.jpg' %}");
     }
+    #about-image{
+    background-image: url("{% static 'images/Main-images/sushi-2.jpeg' %}");
+    
+}
 </style>
 {% endblock style %}
 
@@ -48,14 +52,34 @@
     <div class="container" style="display:flex;flex-direction: column;">
 
         
-        <div class="row justify-content-center mb-5 pb-2" style="margin-top: 150px;">
+        <div class="row justify-content-center  pb-2" style="margin-top: 0px;">
             <div class="col-md-7 text-center heading-section ftco-animate">
                 <span class="subheading">Specialties</span>
                 <br>
-                <h2 class="mb-4">Our Menu</h2>
+                
+                <h2 class="">Our Menu</h2>
             </div>
         </div>
 
+        <section class="ftco-section ftco-no-pt ftco-no-pb">
+            <div class="container">
+                <div class="row d-flex">
+                    
+                    <div class="col-md-12 ftco-animate makereservation">
+                        <div class="heading-section ftco-animate mb-5">
+                            <!-- <span class="subheading">About</span> -->
+                            <br>
+                            <!-- <h2 class="mb-4">Welcome to  JB Sushi Bar</h2> -->
+                            <p style="text-align: justify;">Embark on a tantalizing journey through our meticulously crafted menu, where every dish is a harmonious fusion of tradition and innovation. Indulge in the freshest and most exquisite varieties of sushi, meticulously prepared to delight your senses. From classic favorites to imaginative creations, our menu presents an array of flavors that capture the essence of Japanese culinary artistry. To ensure a safe and enjoyable dining experience for all, we kindly request guests with allergies to reach out to our restaurant staff for personalized assistance. Let our menu be your passport to a world of sushi perfection.</p>
+                            
+                        </div>
+                    </div>
+                    <!-- <div class="col-md-6 d-flex">
+                        <div class="img img-2 w-100 mr-md-2 m-4 d-sm-none d-md-block" id="about-image"></div>
+                    </div> -->
+                </div>
+            </div>
+        </section>
         <!-- menu navigation -->
 
         <section

@@ -17,7 +17,6 @@
 </script>
 <style>
     .splide__slide .btn-container {
-        
         width: 100%;
         height: auto;
         
@@ -26,6 +25,20 @@
     .menu-Image{
         background-image: url("{% static 'images/sushi.jpg' %}");
     }
+
+
+    .fixed-position-property{
+        padding-top: 20px;
+        padding-bottom: 20px;
+        position: sticky;
+        top:70px;
+        z-index:999;
+        background-color:white;
+        margin:100px;
+
+    }
+
+   
 </style>
 {% endblock style %}
 
@@ -62,13 +75,18 @@
         id="thumbnail-carousel"
         class="splide"
         aria-label="The carousel with thumbnails. Selecting a thumbnail will change the Beautiful Gallery carousel." style="margin: 50px; ">
-            <div class="splide__track" >
+            <div class="splide__track" id="test" >
                 <ul class="splide__list">
                     {% for tag in result %} 
                       <li class="splide__slide" class="nav-item {% block nav-about %}{% endblock nav-about %}">
                         <div class="btn-container" style="z-index: 20;">
-                            <a href="#{{tag.tag.name}}" style="color: white;">
-                                <button type="button" class="btn btn-primary" style="height: 60px; width: 110px; ">
+                            <!-- href="#{{tag.tag.name}}" -->
+                            <a style="color: white;"  id="redirect-button">
+                                <button type="button" class="btn btn-primary" style="height: 60px; width: 110px; "
+                                value="{{tag.tag.name}}"
+                                id="redirect-button"
+                                onclick="handleClickToRedirect(this)"
+                                >
                                 {{tag.tag.name}}
                                 </button>
                             </a>
@@ -144,3 +162,65 @@
 </section>
 
 {% endblock content %}
+
+{% block js %}
+
+<script>
+    window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+    console.log(document.documentElement.scrollTop)
+  if (document.documentElement.scrollTop > 956) {
+    document.getElementById("thumbnail-carousel").classList.add('fixed-position-property');
+
+
+    
+  } else {
+    document.getElementById("thumbnail-carousel").classList.remove('fixed-position-property');
+  }
+}
+
+
+
+
+
+    const scrollButton = document.getElementByClass("redirect-button");
+    const value = scrollButton.value;
+    
+
+
+    function handleClickToRedirect(target){
+        // console.log(target.value)
+        // const targetDiv = document.getElementById(target.value);
+        // console.log(targetDiv)
+        // targetDiv.scrollIntoView({
+        //     block:"start",
+        //     behavior: "smooth" // Enable smooth scrolling
+        // });
+
+
+
+
+        var element = document.getElementById(target.value);
+    var headerOffset = 180;
+    var elementPosition = element.getBoundingClientRect().top;
+    var offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+  
+    window.scrollTo({
+         top: offsetPosition,
+         behavior: "smooth"
+    });
+
+        
+    }
+   
+    scrollButton.addEventListener("click", function() {
+        console.log('hello world')
+       
+    });
+
+
+
+
+</script>
+{% endblock js %}

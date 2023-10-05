@@ -42,7 +42,7 @@ class Info(models.Model):
     mobile_number = models.CharField(max_length=20,blank=True,null=True)
     email = models.EmailField(blank=True,null=True)
     instagram = models.URLField(blank=True,null=True)
-    facebook= models.URLField(blank=True,null=True)
+    map_url = models.URLField(blank=True,null=True)
     tripadvisor = models.URLField(blank=True,null=True)
 
 

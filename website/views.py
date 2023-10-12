@@ -28,7 +28,6 @@ def index(request):
         "opening_hour":opening_hour,
         "reseration":reservation
     }
-    print(tags)
     return render(request,'website/index.html',context)
 
 

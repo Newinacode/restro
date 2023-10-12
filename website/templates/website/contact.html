@@ -7,6 +7,24 @@
   #about-Image{
     background-image: url("{% static 'images/Main-images/sushi-9.jpeg' %}");
   }
+  /* #location{
+    background-image: url("{% static 'images/Main-images/11.jpeg' %}");
+    background-size: 100% 100%;
+
+  } */
+
+  /* #email{
+    background-image: url("{% static 'images/Main-images/sg.gif' %}");
+    background-size: 100% 100%;
+  } */
+
+  #info-font{
+    font-weight: bolder;
+    font-size: 120%;
+    font-family: system-ui;
+    color : black;
+
+  }
   
 </style>
 {% endblock style %}
@@ -34,19 +52,21 @@
         <h2 class="h4 font-weight-bold">Contact Information</h2>
       </div>
       <!-- <div class="w-100"></div> -->
-      <div class="col-md-4 d-flex mb-2">
-       <div class="dbox">
-         <p><span>Address:</span> 71 Sandgate Road Folkestone, United Kingdom, CT20 2AF</p>
+      <div class="col-md-4 col-sm-4 d-flex mb-2">
+       <div class="dbox" id="location">
+         <p id="info-font"><span>Location:</span>
+          <span style="color:white;">71 Sandgate Road Folkestone, United Kingdom, CT20 2AF</span>
+         </span></p>
        </div>
      </div>
-     <div class="col-md-4 d-flex mb-2">
+     <div class="col-md-4 col-sm-4 d-flex mb-2">
        <div class="dbox">
-         <p><span>Phone:</span> <a href="tel://{{info.mobile_number}}">{{info.mobile_number}}</a></p>
+         <p id="info-font"><span>Phone:</span><a href="tel://{{info.mobile_number}}">{{info.mobile_number}}</a></p>
        </div>
      </div>
-     <div class="col-md-4 d-flex mb-2">
-       <div class="dbox">
-         <p><span>Email:</span> <a href="mailto:{{info.email}}">{{info.email}}</a></p>
+     <div class="col-md-4 col-sm-4 d-flex mb-2">
+       <div class="dbox" id="email">
+         <p id="info-font"><span>Email:</span> <a href="mailto:{{info.email}}">{{info.email}}</a></p>
        </div>
      </div>
      <!-- <div class="col-md-3 d-flex">

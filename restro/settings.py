@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'website',
     'import_export',
+    'ckeditor'
 ]
 
 MIDDLEWARE = [
@@ -79,33 +80,34 @@ WSGI_APPLICATION = 'restro.wsgi.application'
 
 
 
+if config("PRODUCTION") == "False":
+    dbname = config('NAME')
+    dbpassword = config('PASSWORD')
+    dbhost = config('HOST')
+    dbport = config('PORT')
+    dbuser = config('USERNAME')
 
-# dbname = config('NAME')
-# dbpassword = config('PASSWORD')
-# dbhost = config('HOST')
-# dbport = config('PORT')
-# dbuser = config('USERNAME')
-
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.postgresql',
-#         'NAME': dbname,
-#         'USER': dbuser,
-#         'PASSWORD': dbpassword,
-#         'HOST': dbhost,
-#         'PORT': dbport,
-#     }
-# }
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.postgresql',
+            'NAME': dbname,
+            'USER': dbuser,
+            'PASSWORD': dbpassword,
+            'HOST': dbhost,
+            'PORT': dbport,
+        }
+    }
 
 # Database
 # https://docs.djangoproject.com/en/4.1/ref/settings/#databases
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+if config("PRODUCTION") == "True":
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.sqlite3',
+            'NAME': BASE_DIR / 'db.sqlite3',
+        }
     }
-}
 
 # Password validation
 # https://docs.djangoproject.com/en/4.1/ref/settings/#auth-password-validators
@@ -152,3 +154,20 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles_build', 'static')
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+
+
+CKEDITOR_UPLOAD_PATH = 'uploads/'
+CKEDITOR_IMAGE_BACKEND = "pillow"
+CKEDITOR_JQUERY_URL = '//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js' 
+
+CKEDITOR_CONFIGS = {
+    'default':
+        {
+            'toolbar': 'full',
+            'width': 'auto',
+            'extraPlugins': ','.join([
+                'codesnippet',
+            ]),
+        },
+}

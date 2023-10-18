@@ -1,5 +1,6 @@
 from django.db import models
 from django.utils.translation import gettext_lazy as _
+from ckeditor.fields import RichTextField
 
 # Create your models here.
 class Tag(models.Model):
@@ -12,7 +13,7 @@ class Item(models.Model):
     tag  = models.ForeignKey(Tag,on_delete=models.CASCADE,related_name='items',blank=True,null=True)
     name = models.CharField(max_length=100,blank=True,null=True)
     price = models.CharField(max_length=10,blank=True,null=True)
-    description = models.TextField(blank=True,null=True)
+    description = RichTextField(blank=True,null=True)
 
     def __str__(self):
         return f"{self.name} {self.tag} {self.price}"
@@ -44,6 +45,7 @@ class Info(models.Model):
     instagram = models.URLField(blank=True,null=True)
     map_url = models.URLField(blank=True,null=True)
     tripadvisor = models.URLField(blank=True,null=True)
+    tiktok = models.URLField(blank=True,null=True)
 
 
     def save(self, *args, **kwargs):

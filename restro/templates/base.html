@@ -24,6 +24,7 @@
 	
 	<link rel="stylesheet" href="{% static 'css/flaticon.css' %}">
 	<link rel="stylesheet" href="{% static 'css/style.css' %}">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" />
 
 
 	<!-- Link to the file hosted on your server, -->
@@ -63,7 +64,7 @@
 						<p class="mb-0 d-flex">
 							<a href="{{info.map_url}}" class="d-flex align-items-center justify-content-center"><span class="fa fa-map-marker"><i class="sr-only">Google Map</i></span></a>
 							<!-- <a href="{{info.twitter}}" class="d-flex align-items-center justify-content-center"><span class="fa fa-twitter"><i class="sr-only">Twitter</i></span></a> -->
-							<a href="{{info.instagram}}" class="d-flex align-items-center justify-content-center"><span class="fa fa-instagram"><i class="sr-only">Instagram</i></span></a>
+							<a href="{{info.instagram}}" class="d-flex align-items-center justify-content-center"><span class="fab fa-instagram"><i class="sr-only">Instagram</i></span></a>
 							<!-- <a href="#" class="d-flex align-items-center justify-content-center"><span class="fa fa-dribbble"><i class="sr-only">Dribbble</i></span></a> -->
 						</p>
 					</div>
@@ -115,11 +116,10 @@
 					</div>
 				</div>
 				
-
 				<div class="col-md-8 col-lg-3 col-sm-12">
 					<div class="ftco-footer-widget mb-4">
 						
-						<ul class="list-unstyled open-hours" style="font-size: 1vw;">
+						<ul class="list-unstyled open-hours" >
 							<li class="d-flex"><span>71 Sandgate Rd</span></li>
 							<li class="d-flex"><span>Folkestone</span></li>
 							<li class="d-flex"><span>United Kingdom</span></li>
@@ -129,10 +129,10 @@
 					</div>
 				</div>
 
-				<div class="col-md-8 col-lg-3">
+				<div class="col-md-8 col-lg-3 col-sm-12">
 					<div class="ftco-footer-widget mb-4">
 						
-						<ul class="list-unstyled open-hours" style="font-size: 1vw;">
+						<ul class="list-unstyled open-hours">
 							<li class="d-flex"><span>Contact Us</span></li>
 							<li class="d-flex"><span>{{info.mobile_number}}</span></li>
 							<li class="d-flex"><span>{{info.email}}</span></li>
@@ -140,6 +140,8 @@
 						</ul>	
 					</div>
 				</div>
+
+				
 				
 				<!-- <div class="col-md-6 col-lg-3">
 					<div class="ftco-footer-widget mb-4">
@@ -162,8 +164,9 @@
 							<ul class="ftco-footer-social list-unstyled float-md-left float-lft mt-3">
 								<!-- <li class="ftco-animate"><a href="#"><span class="fa fa-twitter"></span></a></li> -->
 								<li class="ftco-animate"><a href="{{info.map_url}}"><span class="fa fa-map-marker"></span></a></li>
-								<li class="ftco-animate"><a href="{{info.instagram}}"><span class="fa fa-instagram"></span></a></li>
-								<li class="ftco-animate"><a href="{{info.tripadvisor}}"><span class="fa fa-tripadvisor"></span></a></li>
+								<li class="ftco-animate"><a href="{{info.instagram}}"><span class="fab fa-instagram"></span></a></li>
+								<li class="ftco-animate"><a href="{{info.tripadvisor}}"><span class="fab fa-tripadvisor"></span></a></li>
+								<li class="ftco-animate"><a href="{{info.tiktok}}"><span class="fab fa-tiktok"></span></a></li>
 							</ul>
 							
 						</div>

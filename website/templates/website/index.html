@@ -60,12 +60,29 @@
     background-image: url("{% static 'images/Main-images/sushi-10.jpeg' %}");
 }
 
+.modal-backdrop { opacity:1 !important; }
 
+#myModal {
+    background-image: url("{% static 'images/Main-images/opening.png' %}");
+    background-position: center;
+    background-repeat: no-repeat;
+
+}
 </style>
 {% endblock style %}
 
 {% block content %}
 
+
+
+<div>
+    
+      <div id="myModal" class="modal fade bd-example-modal-lg" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+          
+        </div>
+      </div>
+</div>
 
 <section class="hero-wrap">
     <div class="home-slider owl-carousel js-fullheight">
@@ -595,3 +612,12 @@
 {% block nav-index %}
 active
 {% endblock nav-index %}
+
+
+{% block js %}
+<script type="text/javascript">
+    $(window).on('load', function() {
+        $('#myModal').modal('show');
+    });
+</script>
+{% endblock js %}

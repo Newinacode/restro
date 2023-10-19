@@ -46,6 +46,7 @@ class Info(models.Model):
     map_url = models.URLField(blank=True,null=True)
     tripadvisor = models.URLField(blank=True,null=True)
     tiktok = models.URLField(blank=True,null=True)
+    facebook = models.URLField(blank=True,null=True)
 
 
     def save(self, *args, **kwargs):
